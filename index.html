@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1">
+    <script src="https://unpkg.com/dexie@latest/dist/dexie.js"></script>
+    <link type="text/css" rel="stylesheet" href="//unpkg.com/bootstrap/dist/css/bootstrap.min.css" />
+    <link type="text/css" rel="stylesheet" href="//unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.min.css" />
+
+    <!-- Load Vue followed by BootstrapVue -->
+    <script src="//unpkg.com/vue@latest/dist/vue.min.js"></script>
+    <script src="//unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.min.js"></script>
+
+    <!-- Load the following for BootstrapVueIcons support -->
+    <script src="//unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue-icons.min.js"></script>
+    <title>Gemu Gameboy Emulator</title>
+    <link rel="stylesheet" href="./style.css"></link>
+  </head>
+  <body>
+    <div id="app">
+      <gb-root v-if="loaded"></gb-root>
+      <gb-loading v-else></gb-loading>
+    </div>
+  </body>
+
+  <script src="soundv2/Channel.js"></script>
+  <script src="soundv2/Square.js"></script>
+  <script src="soundv2/SoundController.js"></script>
+  <script src="soundv2/Square1.js"></script>
+  <script src="soundv2/Square2.js"></script>
+  <script src="soundv2/Wave.js"></script>
+  <script src="soundv2/Noise.js"></script>
+
+  <script async type="text/javascript" src="gemu.js"></script>
+
+  <script src="main.js"></script>
+  <script src="app.js" type="module"></script>
+</html>
+
